@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Fab Four</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #121212;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 2rem;
+      font-size: 3rem;
+      color: gold;
+      text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.5);
+    }
+
+    .container {
+      border: 5px solid gold;
+      border-radius: 20px;
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 1100px;
+      background: #1e1e1e;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .player {
+      background: #444;
+      border-radius: 20px;
+      padding: 1rem;
+      width: 200px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .player:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+    }
+
+    .player img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid transparent;
+      background: #666;
+      transition: transform 0.3s ease;
+    }
+
+    .player:hover img {
+      transform: scale(1.07);
+    }
+
+    .virat img { border-color: #0455c0; } /* Blue */
+    .smith img { border-color: #d6d300; } /* Lime yellow */
+    .root img { border-color: #4fc3ff; } /* Light blue */
+    .kane img { border-color: #000; }     /* Black */
+
+    .name {
+      margin-top: 0.6rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: gold;
+    }
+
+    .info {
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 0.4rem;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .stats {
+      background: #333;
+      padding: 0.6rem;
+      border-radius: 10px;
+      margin-top: 0.6rem;
+    }
+
+    .format {
+      color: gold;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .player {
+        width: 160px;
+      }
+      .player img {
+        width: 100px;
+        height: 100px;
+        border-width: 5px;
+      }
+      .name {
+        font-size: 1rem;
+      }
+      .info, .stats {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>The Fab Four</h1>
+
+  <div class="container">
+    <div class="gallery">
+
+      <div class="player virat">
+        <img src="virat.jpg" alt="Virat Kohli">
+        <div class="name">Virat Kohli</div>
+        <div class="info">
+          Age: 36<br>
+          Country: India<br>
+          Debut Year: 2008
+        </div>
+        <div class="stats">
+          <div class="format">TEST</div>
+          BS: 254*<br>SR: 55.2<br>Avg: 49.2<br><br>
+          <div class="format">ODI</div>
+          BS: 183<br>SR: 93.6<br>Avg: 58.7<br><br>
+          <div class="format">T20</div>
+          BS: 122*<br>SR: 138.1<br>Avg: 51.8
+        </div>
+      </div>
+
+      <div class="player smith">
+        <img src="smith.jpg" alt="Steve Smith">
+        <div class="name">Steve Smith</div>
+        <div class="info">
+          Age: 36<br>
+          Country: Australia<br>
+          Debut Year: 2010
+        </div>
+        <div class="stats">
+          <div class="format">TEST</div>
+          BS: 239<br>SR: 54.4<br>Avg: 58.6<br><br>
+          <div class="format">ODI</div>
+          BS: 164<br>SR: 87.4<br>Avg: 44.0<br><br>
+          <div class="format">T20</div>
+          BS: 90*<br>SR: 125.1<br>Avg: 25.0
+        </div>
+      </div>
+
+      <div class="player root">
+        <img src="root.jpg" alt="Joe Root">
+        <div class="name">Joe Root</div>
+        <div class="info">
+          Age: 34<br>
+          Country: England<br>
+          Debut Year: 2012
+        </div>
+        <div class="stats">
+          <div class="format">TEST</div>
+          BS: 254<br>SR: 55.6<br>Avg: 49.2<br><br>
+          <div class="format">ODI</div>
+          BS: 133*<br>SR: 86.7<br>Avg: 49.8<br><br>
+          <div class="format">T20</div>
+          BS: 90*<br>SR: 126.3<br>Avg: 35.7
+        </div>
+      </div>
+
+      <div class="player kane">
+        <img src="kane.jpg" alt="Kane Williamson">
+        <div class="name">Kane Williamson</div>
+        <div class="info">
+          Age: 35<br>
+          Country: New Zealand<br>
+          Debut Year: 2009
+        </div>
+        <div class="stats">
+          <div class="format">TEST</div>
+          BS: 251<br>SR: 51.3<br>Avg: 54.9<br><br>
+          <div class="format">ODI</div>
+          BS: 148<br>SR: 81.2<br>Avg: 48.7<br><br>
+          <div class="format">T20</div>
+          BS: 95<br>SR: 122.7<br>Avg: 33.3
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
